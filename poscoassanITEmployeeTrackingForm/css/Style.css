@@ -1,35 +1,99 @@
-﻿.form-container {
-    background: white;
-    padding: 30px;
-    max-width: 800px;
-    margin: auto;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-.form-row {
-    margin-bottom: 15px;
-}
-
-label {
-    font-weight: bold;
-    display: block;
-    margin-bottom: 5px;
-}
-
-input, select {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-h2 {
+﻿/* Başlık Stili */
+.form-title {
+    font-weight: 700;
+    font-size: 28px;
+    color: #2c3e50;
     text-align: center;
     margin-bottom: 30px;
 }
 
-h3 {
-    margin-top: 30px;
-    color: #2e6da4;
+/* Kart Yapısı */
+.card {
+    border-radius: 12px;
+    background: #fdfdfd;
+    border: 1px solid #dee2e6;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+/* Etiketler */
+label.form-label {
+    font-weight: 600;
+    color: #212529;
+    margin-bottom: 6px;
+}
+
+/* TextBox ve DropDown */
+.form-control,
+.form-select {
+    border-radius: 8px;
+    border: 1px solid #ced4da;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+    padding: 10px;
+    font-size: 14.5px;
+}
+
+    .form-control:focus,
+    .form-select:focus {
+        border-color: #198754;
+        box-shadow: 0 0 0 0.2rem rgba(25, 135, 84, 0.2);
+        background-color: #fefefe;
+    }
+
+/* Panel Kartları (Kanıt Maddeleri) */
+.panel-box {
+    border-radius: 10px;
+    padding: 20px 25px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.04);
+    margin-bottom: 20px;
+    border-left: 6px solid #198754;
+    background-color: #ffffff;
+}
+
+    /* Başlıklar */
+    .panel-box h5 {
+        font-weight: 700;
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+
+/* Kanıt Gerektiren Panel */
+.panel-proof {
+    background-color: #e3f7fc;
+    color: #0c5460;
+    border-left-color: #0dcaf0;
+}
+
+/* Kanıt Gerektirmeyen Panel */
+.panel-noproof {
+    background-color: #f5f5f5;
+    color: #495057;
+    border-left-color: #adb5bd;
+}
+
+/* Checkbox Kutuları */
+.form-check {
+    margin-bottom: 10px;
+    padding-left: 0rem;
+    position: relative;
+    transform: scale(1);
+    margin-right: 8px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.form-check-label {
+    font-size: 14.3px;
+    color: #343a40;
+}
+
+/* Responsive düzeltmeler */
+@media (max-width: 767.98px) {
+    .form-title {
+        font-size: 24px;
+    }
+
+    .panel-box {
+        padding: 15px 20px;
+    }
 }
